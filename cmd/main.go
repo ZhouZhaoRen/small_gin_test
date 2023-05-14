@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println()
 	router := InitRouter()
 	//pprof.Register(router)
 
