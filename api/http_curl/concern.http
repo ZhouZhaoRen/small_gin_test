@@ -1,0 +1,9 @@
+## 专门给关注用的接口测试
+
+# curl -H "Content-Type: application/json" -X POST -d '{"uid": 762513499 }' "http://11.146.15.234:17682/api/musicPet/noteWeekRank"
+GET http://127.0.0.1:8080/test
+Content-Type: application/json
+
+{
+  "uid": 7625134992
+}
