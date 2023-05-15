@@ -5,5 +5,17 @@ GET http://127.0.0.1:8080/test
 Content-Type: application/json
 
 {
-  "uid": 7625134992
+  "uid": 762513499
+
+}
+
+### aaa
+# curl -H "Content-Type: application/json" -X POST -d '{"uid": 762513499 }' "http://11.146.15.234:17682/api/musicPet/noteWeekRank"
+POST http://127.0.0.1:8080/api/uid_flake
+Content-Type: application/json
+
+{
+  "uid": 7625134992,
+  "uid_list": [123,456,789],
+  "uinList": [22,33,44]
 }

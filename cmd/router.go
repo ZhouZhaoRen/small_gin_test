@@ -2,6 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"small_gin_test/app"
+	"small_gin_test/app/uid_flake"
 	//v1 "go-gin-example/routers/api/v1"
 )
 
@@ -16,6 +18,13 @@ func InitRouter() *gin.Engine {
 			"message": "test",
 		})
 	})
+
+	hanlders := []app.Handler{
+		&uid_flake.UidFlake{},
+	}
+	for i := range hanlders {
+		r.POST(hanlders[i].Router(), hanlders[i].Handler)
+	}
 
 	apiConcern := r.Group("/api/concern")
 	//apiv1.Use(jwt.JWT()) // 在这里添加中间件，每次执行都会先走这里进行token验证
